@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Productos - Papelería Lapicito</title>
+  <link rel="stylesheet" href="productos.css">
+</head>
+<body>
+
+  <h1>🛍️ Productos Papelería Lapicito</h1>
+
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Producto</th>
+        <th>Precio</th>
+        <th>Agregar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Cuaderno</td>
+        <td>20</td>
+        <td><button class="agregar" data-nombre="Cuaderno" data-precio="20">Agregar</button></td>
+      </tr>
+      <tr>
+        <td>Lápiz</td>
+        <td>5</td>
+        <td><button class="agregar" data-nombre="Lápiz" data-precio="5">Agregar</button></td>
+      </tr>
+      <tr>
+        <td>Pluma</td>
+        <td>8</td>
+        <td><button class="agregar" data-nombre="Pluma" data-precio="8">Agregar</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>🛒 Carrito de Compras</h2>
+  <ul id="carrito"></ul>
+  <p><strong>Total:</strong> $<span id="total">0</span></p>
+  <script src="productos.js">
+
+// Mostrar mensaje al cargar la página
+window.onload = function () {
+  alert("¡Bienvenido a nuestra tienda! 🛒 Elige tus productos favoritos.");
+};
+
+let total = 0;
+const carrito = document.getElementById('carrito');
+const totalSpan = document.getElementById('total');
+
+// Seleccionar todos los botones con clase 'agregar'
+const botones = document.querySelectorAll('.agregar');
+
+// Agregar evento a cada botón
+botones.forEach(boton => {
+  boton.addEventListener('click', () => {
+    const nombre = boton.dataset.nombre;
+    const precio = parseFloat(boton.dataset.precio);
+
+    // Agregar producto al carrito
+    const item = document.createElement('li');
+    item.textContent = ${nombre} - $${precio};
+    carrito.appendChild(item);
+
+    // Sumar al total
+    total += precio;
+    totalSpan.textContent = total;
+  });
+});
+  </script>
+</body>
+</html>

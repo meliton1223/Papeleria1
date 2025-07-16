@@ -1,0 +1,35 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #ffecc9;
+}
+
+h1, h2 {
+  color: #c94b4b;
+}
+
+table {
+  width: 100%;
+  margin-bottom: 20px;
+  background-color: #fff;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+}
+
+button {
+  padding: 5px 10px;
+  background-color: orange;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#carrito {
+  list-style-type: none;
+  padding-left: 0;
+}

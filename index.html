@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Papelería Lapicito</title>
+  <link rel="stylesheet" href="esti.css">
+</head>
+<body>
+  <header>
+
+
+    <img src="C:\xampp\htdocs\papeleria\img\hh.png" alt="Logo izquierdo" class="logo">
+    <h1><span class="amarillo">PAPELERÍA</span> <span class="rojo">LAPICITO</span></h1>
+    <p class="subtitulo">papelería linda con amor :3&lt;3</p>
+    <img src="C:\xampp\htdocs\papeleria\img\lapiz.png" alt="Logo derecho" class="logo">
+  </header>
+
+  <div class="mensaje-bienvenida">
+
+    <span class="cerrar">✖</span>
+    <p>OLA BIENVENIDO</p>
+    <audio controls>
+  <source src="C:\xampp\htdocs\papeleria\audi\La Marcha de las Vocales - E2.mp3" type="audio/mpeg" />
+  Tu navegador no soporta el elemento de audio.
+</audio>
+
+  </div>
+
+  <main>
+    <section class="seccion">
+      
+         <a href="productos.html" class="boton-productos">PRODUCTOS</a> 
+      
+      <img src="C:\xampp\htdocs\papeleria\img\pape.png" alt="imagen-grande">
+      <a href="formulario.html" class="FORMULARIO">productos</a>
+    </section>
+    <button class="siguiente">SIGUIENTE</button>
+  </main>
+
+  <footer>
+    <a href="#">INSTAGRAM</a>
+    <a href="vide.html">CORREO</a>
+    <a href="#">CONTACTO</a>
+  </footer>
+
+  <script src="script.js">
+    // Mensaje al cargar la página
+window.onload = function () {
+  alert("¡Bienvenido a Papelería Lapicito! 🖍️✨");
+};
+
+// Botón de PRODUCTOS
+document.getElementById('btnProductos').addEventListener('click', function () {
+  alert('¡Estos son nuestros productos más lindos! 🎨📎✏️');
+});
+
+
+// Cerrar mensaje de bienvenida
+document.getElementById('cerrarMensaje').addEventListener('click', function () {
+  document.querySelector('.mensaje-bienvenida').style.display = 'none';
+});
+  </script>
+</body>
+</html>
